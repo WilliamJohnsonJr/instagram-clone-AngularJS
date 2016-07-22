@@ -3,6 +3,6 @@
 <form ng-submit="addImage()"> 
     <input type="text" class="input" placeholder="Image Name" ng-model="image.name">
     <input type="text" class="input" placeholder="Image URL" ng-model="image.url">
-    <textarea rows="5" cols="40"></textarea><br>
-  <button class="button" ng-submit="AddImage()">Add Image</button>
+    <textarea rows="5" cols="40" ng-model="image.information"></textarea><br>
+  <button class="button is-primary" ng-submit="AddImage()">Add Image</button>
 </form>
