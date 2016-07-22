@@ -8,9 +8,7 @@ function HomeController($scope, SERVER, $http){
       $scope.pics = res.data;
     });
   }
-
 }
 
-HomeController.$inject = ['$scope', '$http', 'SERVER'];
+HomeController.$inject = ['$scope', 'SERVER', '$http'];
 export { HomeController };
-}
