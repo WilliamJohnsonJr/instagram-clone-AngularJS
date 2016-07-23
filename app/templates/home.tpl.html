@@ -1,1 +1,11 @@
-<h1> Home Page</h1>
+<div class="homePageContainer">
+	<div class="columns is-multiline">
+		<div class="card column is-3" ng-repeat="image in images">
+		  <div class="card-image">
+		    <figure class="image is-2by2">
+		      <img src="{{image.url}}" class="{{ image._id }}"" alt="{{image.name}}" ng-mouseover="popups(image)" ng-mouseleave="removePopups(image)">
+		    </figure>
+		  </div>
+		</div>
+	</div>
+</div>

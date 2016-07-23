@@ -1,8 +1,8 @@
 <h1>AddEdit Page</h1>
 
-<form ng-submit="addImage()"> 
+<form ng-submit="addImage(image)"> 
     <input type="text" class="input" placeholder="Image Name" ng-model="image.name">
     <input type="text" class="input" placeholder="Image URL" ng-model="image.url">
     <textarea rows="5" cols="40" ng-model="image.information"></textarea><br>
-  <button class="button is-primary" ng-submit="AddImage()">Add Image</button>
+  <button class="button is-primary">Add Image</button>
 </form>
