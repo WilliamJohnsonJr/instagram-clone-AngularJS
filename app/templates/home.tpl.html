@@ -1,10 +1,13 @@
 <div class="homePageContainer">
 	<div class="columns is-multiline">
 		<div class="card column is-3" ng-repeat="image in images">
-		  <div class="card-image">
+		  <div class="card-image {{ image._id }}" ng-mouseover="mouseOver()" ng-mouseleave="mouseLeave()" ng-dblclick="likeImage(image)">
 		    <figure class="image is-2by2">
-		      <img src="{{image.url}}" class="{{ image._id }}"" alt="{{image.name}}" ng-mouseover="popups(image)" ng-mouseleave="removePopups(image)">
+		      <img src="{{image.url}}" alt="{{image.name}}">
 		    </figure>
+		    <span class="tag is-danger" ng-show="popup">Likes: {{image.likeCount}}
+	  			<button class="delete" ng-click="deleteImage(image._id)"></button>
+	  		</span>
 		  </div>
 		</div>
 	</div>
