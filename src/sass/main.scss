@@ -10,6 +10,13 @@ textarea {
 	margin-bottom: 40px;
 }
 
+.circleImage {
+	width: 150px;
+	height: 150px;
+	background-image: url(http://placecage.com/150/150);
+	border-radius: 100%;
+}
+
 .homePageContainer{
 	display: flex;
 	justify-content: center;
