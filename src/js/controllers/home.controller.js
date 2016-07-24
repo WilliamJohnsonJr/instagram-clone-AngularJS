@@ -6,7 +6,11 @@ function HomeController($scope, SERVER, $http){
   	$scope.likeImage = (image)=>{
   		image.liked = true;
   		image.likeCount = image.likeCount + 1;
-		console.log(image);
+      $http.delete(SERVER.URL + image._id).then( (response) => {
+        $http.post(SERVER.URL, image).then( (res) => {
+          init();
+        });
+      });  
   	};
 
   	$scope.mouseOver = function(image){
