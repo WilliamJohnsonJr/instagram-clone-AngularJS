@@ -6,11 +6,10 @@ function HomeController($scope, SERVER, $http){
   	$scope.likeImage = (image)=>{
   		image.liked = true;
   		image.likeCount = image.likeCount + 1;
-      $http.delete(SERVER.URL + image._id).then( (response) => {
-        $http.post(SERVER.URL, image).then( (res) => {
-          init();
+      $http.put(SERVER.URL + image._id, JSON.stringify(image, ['information', 'likeCount', 'name', 'url'])).then( (response) => {
+          console.log(response.data);
+            init();
         });
-      });  
   	};
 
   	$scope.mouseOver = function(image){
@@ -31,14 +30,9 @@ function HomeController($scope, SERVER, $http){
     });
   }
 
-	$scope.deleteImage = (imageID) => {
-		console.log("Removing: "+imageID);
-		$http.delete(SERVER.URL + imageID).then( (response) => {
-			$scope.images = $scope.images.filter((i)=>{
-				return i._id !== imageID;
-			});
-			console.log("Removed.");
-			console.log($scope.images);
+	$scope.deleteImage = (image) => {
+		$http.delete(SERVER.URL + image._id).then( (response) => {
+        init ();
 		});
 	};	
 }

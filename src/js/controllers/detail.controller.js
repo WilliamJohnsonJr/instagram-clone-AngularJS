@@ -5,7 +5,6 @@ $scope.detailImage = {};
   init();
 
   function init () {
-  	console.log($stateParams);
     $http.get(SERVER.URL + $stateParams.id).then( (res) => {
       $scope.detailImage = res.data;
     });
