@@ -12,9 +12,11 @@ $scope.detailImage = {};
   }
 
    	$scope.likeImage = (image)=>{
-  		image.liked = true;
   		image.likeCount = image.likeCount + 1;
-		console.log(image);
+    	  $http.put(SERVER.URL + image._id, JSON.stringify(image, ['information', 'likeCount', 'name', 'url'])).then( (response) => {
+          console.log(response.data);
+            init();
+        });
   	};
 
   	$scope.mouseOver = function(image){
