@@ -12,6 +12,20 @@ $scope.detailImage = {};
 
   }
 
+   	$scope.likeImage = (image)=>{
+  		image.liked = true;
+  		image.likeCount = image.likeCount + 1;
+		console.log(image);
+  	};
+
+  	$scope.mouseOver = function(image){
+  		image.popup = true;
+  	};
+
+  	$scope.mouseLeave = function(image){
+  		image.popup = false;
+  	}
+
 }
 
 DetailController.$inject = ['$scope', '$stateParams', 'SERVER', '$http'];

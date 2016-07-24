@@ -1,6 +1,6 @@
 <div class="homePageContainer">
 	<div class="columns is-multiline">
-		<div class="card column is-3" ng-repeat="image in images">
+		<div class="card column is-three-quarters-mobile is-one-third-tablet is-one-quarter-desktop" ng-repeat="image in images">
 		  <div class="card-image {{ image._id }}">
 		    <figure class="image is-4by3">
 		      <a href="/#/detail/{{image._id}}">
@@ -11,7 +11,7 @@
 		    	<i class="fa fa-heart" ng-click="likeImage(image)" ng-mouseenter="mouseOver(image)" ng-mouseleave="mouseLeave(image)"></i>
 		    	<div class="likeCount">{{image.likeCount}}</div>
 	  		</span>
-	  		<button class="delete" ng-show="image.popup" ng-click="deleteImage(image._id)"></button>
+	  		<button class="delete" ng-show="image.popup" ng-click="deleteImage(image._id)" ng-mouseenter="mouseOver(image)" ng-mouseleave="mouseLeave(image)"></button>
 		  </div>
 		</div>
 	</div>

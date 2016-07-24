@@ -20,7 +20,12 @@ textarea {
 .homePageContainer{
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
+}
+
+.addPageContainer{
+	padding: 0px 10%;
 }
 
 .detailPageContainer{
@@ -30,6 +35,8 @@ textarea {
 
 .columns {
 	width: 80%;
+	display: flex;
+	justify-content: center;
 }
 
 .card {
@@ -57,9 +64,34 @@ textarea {
 	padding: 5px 20px;
 }
 
-.icon {
+.likeCount {
+	margin-left: 5px;
+}
+
+.icon{
 	position: absolute;
 	top: 40%;
 	left: 40%;	
 	color: white;
+	display: flex;
+	align-items: center;
+}
+
+.imageColumn {
+	position: relative;
+}
+
+.displayIcon {
+	position: absolute;
+	top: 40%;
+	left: 40%;	
+	color: white;
+	&:hover{
+		text-shadow: 0 0 30px #66D9EB;
+	}
+}
+
+.likeCountDetail{
+	margin-top: 5px;
+	font-size: 12px;
 }

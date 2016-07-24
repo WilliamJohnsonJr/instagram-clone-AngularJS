@@ -1,8 +1,11 @@
 
 <div class="detailPageContainer">
 	<div class="columns">
-		<div class="column is-half">
-			<img ng-src="{{ detailImage.url }}">
+		<div class="column is-half imageColumn">
+			<img ng-src="{{ detailImage.url }}" ng-mouseenter="mouseOver(detailImage)" ng-mouseleave="mouseLeave(detailImage)">
+		    <span ng-show="detailImage.popup">
+		    	<i class="fa fa-heart fa-5x displayIcon" ng-click="likeImage(detailImage)" ng-mouseenter="mouseOver(detailImage)" ng-mouseleave="mouseLeave(detailImage)"></i>
+	  		</span>			
 		</div>
 		<div class="column infoColumn is-half">
 			<section class="hero is-dark">
@@ -14,6 +17,7 @@
 			    </div>
 			  </div>
 			</section>
+			<div class="likeCountDetail">Likes: {{detailImage.likeCount}}</div>			
 			<div class="content">
 				{{ detailImage.information }}
 			</div>

@@ -1,8 +1,11 @@
-<h1>AddEdit Page</h1>
+<div class="addPageContainer">
 
-<form ng-submit="addImage(image)"> 
-    <input type="text" class="input" placeholder="Image Name" ng-model="image.name">
-    <input type="text" class="input" placeholder="Image URL" ng-model="image.url">
-    <textarea rows="5" cols="40" ng-model="image.information"></textarea><br>
-  <button class="button is-primary">Add Image</button>
-</form>
+	<h1>Add Images</h1>
+
+	<form ng-submit="addImage(image)"> 
+	    <input type="text" class="input" placeholder="Image Name" ng-model="image.name">
+	    <input type="text" class="input" placeholder="Image URL" ng-model="image.url">
+	    <textarea rows="5" cols="40" ng-model="image.information"></textarea><br>
+	  <button class="button is-primary">Add Image</button>
+	</form>
+</div>

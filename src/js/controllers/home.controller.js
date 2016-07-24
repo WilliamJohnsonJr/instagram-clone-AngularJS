@@ -23,6 +23,7 @@ function HomeController($scope, SERVER, $http){
       $scope.images.forEach(function(image){
       	image.popup = false;
       });
+      console.log($scope.images);
     });
   }
 
