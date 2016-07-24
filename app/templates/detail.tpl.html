@@ -1,21 +1,22 @@
-<h1>Detail Page</h1>
 
-<div class="columns">
-	<div class="column is-half">
-		<img src="http://placecage.com/1000/1000">
-		<img ng-src="{{ image.url }}">
-	</div>
-	<div class="column is-half">
-		<div class="tag is-dark">
-			{{ image.name }} PLACEHOLDER
+<div class="detailPageContainer">
+	<div class="columns">
+		<div class="column is-half">
+			<img ng-src="{{ detailImage.url }}">
 		</div>
-		<div class="content">
-			{{ image.information }} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<div class="column infoColumn is-half">
+			<section class="hero is-dark">
+			  <div class="hero-body">
+			    <div class="container">
+			    	<h2 class="subtitle">
+			        	{{detailImage.name}}
+			    	</h2>
+			    </div>
+			  </div>
+			</section>
+			<div class="content">
+				{{ detailImage.information }}
+			</div>
 		</div>
 	</div>
 </div>

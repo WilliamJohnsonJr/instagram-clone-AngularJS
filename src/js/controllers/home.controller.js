@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 function HomeController($scope, SERVER, $http){
 	$scope.images = [];
 
@@ -11,22 +9,20 @@ function HomeController($scope, SERVER, $http){
 		console.log(image);
   	};
 
-  	$scope.popup = false;
-
-  	$scope.mouseOver = function(){
-  		$scope.popup = true;
-  		console.log($scope.popup);
+  	$scope.mouseOver = function(image){
+  		image.popup = true;
   	};
 
-  	$scope.mouseLeave = function(){
-  		$scope.popup = false;
-  		console.log($scope.popup);
+  	$scope.mouseLeave = function(image){
+  		image.popup = false;
   	}
 
   function init () {
     $http.get(SERVER.URL).then( (res) => {
       $scope.images = res.data;
-      console.log($scope.images);
+      $scope.images.forEach(function(image){
+      	image.popup = false;
+      });
     });
   }
 

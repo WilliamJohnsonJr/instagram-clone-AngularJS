@@ -20,8 +20,12 @@ textarea {
 .homePageContainer{
 	display: flex;
 	justify-content: center;
-	margin-left: 10%;
-	margin-right: 10%;
+
+}
+
+.detailPageContainer{
+	display: flex;
+	justify-content: center;
 }
 
 .columns {
@@ -35,8 +39,27 @@ textarea {
 	position: relative;
 }
 
-.tag {
+.delete {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 40%;
+	left: 40%;
+}
+
+.infoColumn{
+	position: relative;
+}
+
+.content {
+	margin-top: 10px;
+}
+
+.hero-body {
+	padding: 5px 20px;
+}
+
+.icon {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: white;
 }

@@ -1,6 +1,18 @@
-function DetailController ($scope, SERVER, $http){
+function DetailController ($scope, $stateParams, SERVER, $http){
+
+$scope.detailImage = {};
+
+  init();
+
+  function init () {
+
+    $http.get(SERVER.URL + $stateParams.id).then( (res) => {
+      $scope.detailImage = res.data;
+    });
+
+  }
 
 }
 
-DetailController.$inject = ['$scope', 'SERVER', '$http'];
+DetailController.$inject = ['$scope', '$stateParams', 'SERVER', '$http'];
 export { DetailController };

@@ -11,7 +11,7 @@ function config ($stateProvider, $urlRouterProvider) {
       controller: 'HomeController'
     })
     .state('root.detail', {
-      url: '/detail',
+      url: '/detail/:id',
       templateUrl: 'templates/detail.tpl.html',
       controller: 'DetailController'
     })
